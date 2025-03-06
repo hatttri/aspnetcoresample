@@ -1,6 +1,6 @@
 namespace WebApplication1
 {
-    public class WeatherForecast
+    public class WeatherForecastRequest
     {
         public required string Name { get; set; }
     }
