@@ -18,7 +18,7 @@ namespace WebApplication1.Controllers
         {
             return new WeatherForecast
             {
-                Name = req.Name
+                Name = "OK"
             };
         }
     }
