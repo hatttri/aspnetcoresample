@@ -9,7 +9,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.Configure<IISServerOptions>(options =>
 {
-    options.MaxRequestBodySize = 100;
+    options.MaxRequestBodySize = 2000000;
 });
 
 builder.WebHost.ConfigureKestrel(serverOptions =>
