@@ -6,22 +6,22 @@ namespace WebApplication1.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController()
         {
-            _logger = logger;
         }
 
-        [HttpPost]
-        public async Task<WeatherForecast> Post(WeatherForecastRequest req)
+        [HttpGet("10")]
+        public async Task<string> GetDelay10()
         {
-            await Task.Delay(230 * 1000);
+            await Task.Delay(10 * 1000);
+            return "OK";
+        }
 
-            return new WeatherForecast
-            {
-                Name = "OK"
-            };
+        [HttpGet("20")]
+        public async Task<string> GetDelay20()
+        {
+            await Task.Delay(20 * 1000);
+            return "OK";
         }
     }
 }
