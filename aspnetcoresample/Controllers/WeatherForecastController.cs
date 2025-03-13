@@ -14,8 +14,10 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        public WeatherForecast Post(WeatherForecastRequest req)
+        public async Task<WeatherForecast> Post(WeatherForecastRequest req)
         {
+            await Task.Delay(230 * 1000);
+
             return new WeatherForecast
             {
                 Name = "OK"
