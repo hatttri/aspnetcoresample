@@ -11,16 +11,16 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet("10")]
-        public async Task<string> GetDelay10()
+        public async Task<string> GetDelay200()
         {
-            await Task.Delay(10 * 1000);
+            await Task.Delay(200 * 1000);
             return "OK";
         }
 
         [HttpGet("20")]
-        public async Task<string> GetDelay20()
+        public async Task<string> GetDelay260()
         {
-            await Task.Delay(20 * 1000);
+            await Task.Delay(260 * 1000);
             return "OK";
         }
     }
